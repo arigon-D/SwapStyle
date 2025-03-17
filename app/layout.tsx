@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { SessionProvider } from 'next-auth/react';
 import Navigation from '@/components/Navigation';
+import Providers from '@/components/Providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'SwapStyle - Swap Clothes in Your City',
-  description: 'A platform for swapping clothes within your city or radius',
+  description: 'Swap clothes with people in your city • Save money • Save the environment',
 };
 
 export default function RootLayout({
@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SessionProvider>
+        <Providers>
           <Navigation />
           <main>{children}</main>
-        </SessionProvider>
+        </Providers>
       </body>
     </html>
   );

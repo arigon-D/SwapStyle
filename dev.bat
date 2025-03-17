@@ -25,4 +25,7 @@ if not exist .env (
 
 REM Start development server
 echo Starting development server...
-call npm run dev 
+call npm run dev
+
+REM Clear Next.js cache
+rm -rf .next 

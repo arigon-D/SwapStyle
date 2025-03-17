@@ -21,7 +21,24 @@ const userSchema = new mongoose.Schema({
   },
   phoneNumber: {
     type: String,
-    default: null,
+    unique: true,
+    sparse: true,
+  },
+  isPhoneVerified: {
+    type: Boolean,
+    default: false,
+  },
+  verificationCode: {
+    type: String,
+    select: false,
+  },
+  verificationCodeExpires: {
+    type: Date,
+    select: false,
+  },
+  password: {
+    type: String,
+    select: false,
   },
 
   // Location information for proximity-based features

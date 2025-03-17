@@ -68,10 +68,16 @@ export default function Navigation() {
             ) : (
               <>
                 <Link
-                  href="/api/auth/signin"
+                  href="/auth/signin"
                   className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Sign in
+                </Link>
+                <Link
+                  href="/auth/signup"
+                  className="bg-primary text-white hover:bg-primary-dark px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Sign up
                 </Link>
               </>
             )}
